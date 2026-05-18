@@ -10,7 +10,9 @@ const app = express();
 const port = process.env.PORT || 8001;
 
 const mongodb_uri =  `mongodb+srv://devkarjash:${process.env.MONGODB_URI_PASSWORD}@cluster0.tganp.mongodb.net/?appName=Cluster0`
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json());
 app.use(router);
 
