@@ -18,6 +18,11 @@ const contentSchema = new mongoose.Schema(
       ref: "Section",
       required: true,
     },
+
+    displayOnHomePage: {
+      type: Boolean,
+      default: true,
+    },
   },
   {
     timestamps: true,
